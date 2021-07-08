@@ -1,0 +1,34 @@
+plugins {
+  id 'java'
+  id 'org.jetbrains.intellij' version '0.7.2'
+}
+
+group 'org.eduardtita'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+  version = '2020.2'
+
+  pluginName 'jcef-tool-window'
+
+  // Starting from IDEA 2020.2 we use the JCEF browser and drop support for JavaJX going forward.
+  version '2020.2'
+
+  // Use versions like IU-2020.2 to pull the IDEA Ultimate edition as a dependency
+
+  // do not modify IDEA version compatibility in plugin.xml
+  updateSinceUntilBuild false
+
+}
+
+buildSearchableOptions {
+  enabled = false
+}
+
